@@ -1,0 +1,15 @@
+.\obj\dns.o: ..\..\lib\ioLibrary\Internet\DNS\dns.c
+.\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\dns.o: ..\..\lib\ioLibrary\Ethernet\socket.h
+.\obj\dns.o: ..\..\lib\ioLibrary\Ethernet\wizchip_conf.h
+.\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\dns.o: ..\..\lib\CMSIS\Device\WIZnet\W7500\Include\W7500x.h
+.\obj\dns.o: ..\..\lib\CMSIS\Include\core_cm0.h
+.\obj\dns.o: ..\..\lib\CMSIS\Include\core_cmInstr.h
+.\obj\dns.o: ..\..\lib\CMSIS\Include\core_cmFunc.h
+.\obj\dns.o: ..\..\lib\CMSIS\Device\WIZnet\W7500\Include\system_W7500x.h
+.\obj\dns.o: ..\..\lib\CMSIS\Device\WIZnet\W7500\Include\W7500x.h
+.\obj\dns.o: ..\..\lib\ioLibrary\Internet\DNS\dns.h
+.\obj\dns.o: ..\..\lib\W7500x_stdPeriph_Driver\inc\W7500x_wztoe.h
+.\obj\dns.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

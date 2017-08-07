@@ -1,0 +1,10 @@
+.\obj\testsuite.o: ..\..\src\testSuite\testSuite.c
+.\obj\testsuite.o: ..\..\src\testSuite\testSuite.h
+.\obj\testsuite.o: ..\..\src\testSuite\flash/flashTest.h
+.\obj\testsuite.o: ..\..\src\testSuite\softI2C/softI2CTest.h
+.\obj\testsuite.o: ..\..\src\testSuite\uart/uartTest.h
+.\obj\testsuite.o: ..\..\src\common\common.h
+.\obj\testsuite.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\testsuite.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\obj\testsuite.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\testsuite.o: ..\..\src\testSuite\gpio/gpioTest.h
