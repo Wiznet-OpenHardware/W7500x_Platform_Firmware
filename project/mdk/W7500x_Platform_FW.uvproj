@@ -374,7 +374,7 @@
               <MiscControls></MiscControls>
               <Define>CORTEX_M0 USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\lib\W7500x_stdPeriph_Driver\inc;..\..\lib\CMSIS\Include;..\..\lib\CMSIS\Device\WIZnet\W7500\Include;..\..\src;..\..\lib\ioLibrary\Ethernet;..\..\lib\ioLibrary\Internet\DHCP;..\..\lib\ioLibrary\Internet\DNS;..\..\lib\ioLibrary\MDIO;..\..\src\hw\core;..\..\src\testSuite;..\..\src\common;..\..\src\app;..\..\src\hw;..\..\src\hw\board</IncludePath>
+              <IncludePath>..\..\drv\W7500x_stdPeriph_Driver\inc;..\..\drv\CMSIS\Include;..\..\drv\CMSIS\Device\WIZnet\W7500\Include;..\..\src;..\..\lib\ioLibrary\Ethernet;..\..\lib\ioLibrary\Internet\DHCP;..\..\lib\ioLibrary\Internet\DNS;..\..\lib\ioLibrary\MDIO;..\..\src\hw\core;..\..\src\testSuite;..\..\src\common;..\..\src\app;..\..\src\hw;..\..\src\hw\board</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -421,7 +421,7 @@
             <File>
               <FileName>startup_W7500x.s</FileName>
               <FileType>2</FileType>
-              <FilePath>..\..\lib\CMSIS\Device\WIZnet\W7500\Source\ARM\startup_W7500x.s</FilePath>
+              <FilePath>..\..\drv\CMSIS\Device\WIZnet\W7500\Source\ARM\startup_W7500x.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -431,7 +431,7 @@
             <File>
               <FileName>system_W7500x.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\CMSIS\Device\WIZnet\W7500\Source\system_W7500x.c</FilePath>
+              <FilePath>..\..\drv\CMSIS\Device\WIZnet\W7500\Source\system_W7500x.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -441,62 +441,62 @@
             <File>
               <FileName>W7500x_adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_adc.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_adc.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_crg.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_crg.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_crg.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_dma.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_dma.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_dma.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_dualtimer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_dualtimer.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_dualtimer.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_exti.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_exti.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_exti.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_gpio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_gpio.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_gpio.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_pwm.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_pwm.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_pwm.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_rng.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_rng.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_rng.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_ssp.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_ssp.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_ssp.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_uart.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_uart.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_wdt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_wdt.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_wdt.c</FilePath>
             </File>
             <File>
               <FileName>W7500x_wztoe.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_wztoe.c</FilePath>
+              <FilePath>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_wztoe.c</FilePath>
             </File>
           </Files>
         </Group>

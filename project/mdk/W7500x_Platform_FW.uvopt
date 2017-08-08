@@ -230,7 +230,7 @@
 
   <Group>
     <GroupName>MDK-ARM</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -241,7 +241,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\CMSIS\Device\WIZnet\W7500\Source\ARM\startup_W7500x.s</PathWithFileName>
+      <PathWithFileName>..\..\drv\CMSIS\Device\WIZnet\W7500\Source\ARM\startup_W7500x.s</PathWithFileName>
       <FilenameWithoutPath>startup_W7500x.s</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -261,7 +261,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\CMSIS\Device\WIZnet\W7500\Source\system_W7500x.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\CMSIS\Device\WIZnet\W7500\Source\system_W7500x.c</PathWithFileName>
       <FilenameWithoutPath>system_W7500x.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -270,7 +270,7 @@
 
   <Group>
     <GroupName>W7500_Periphs</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -281,7 +281,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_adc.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_adc.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -293,7 +293,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_crg.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_crg.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_crg.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -305,7 +305,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_dma.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_dma.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_dma.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -317,7 +317,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_dualtimer.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_dualtimer.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_dualtimer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -329,7 +329,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_exti.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_exti.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_exti.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -341,7 +341,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_gpio.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_gpio.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_gpio.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -353,7 +353,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_pwm.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_pwm.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_pwm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -365,7 +365,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_rng.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_rng.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_rng.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -377,7 +377,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_ssp.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_ssp.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_ssp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -389,7 +389,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_uart.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_uart.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -401,7 +401,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_wdt.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_wdt.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_wdt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -413,7 +413,7 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\lib\W7500x_stdPeriph_Driver\src\W7500x_wztoe.c</PathWithFileName>
+      <PathWithFileName>..\..\drv\W7500x_stdPeriph_Driver\src\W7500x_wztoe.c</PathWithFileName>
       <FilenameWithoutPath>W7500x_wztoe.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -422,7 +422,7 @@
 
   <Group>
     <GroupName>ioLibrary</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
