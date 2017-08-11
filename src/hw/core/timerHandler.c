@@ -6,6 +6,8 @@
 
 /* extern variables */
 extern volatile uint16_t uart_timer_ms;
+extern volatile uint32_t dhcp_tick_1s;
+extern volatile uint32_t dns_1s_tick;
 
 /* private variables */
 static volatile uint16_t msec_cnt = 0;
@@ -89,6 +91,8 @@ void handleTimerZeroIRQ(void)
         if (msec_cnt >= 1000 - 1) {
             msec_cnt = 0;
             sec_cnt++;
+            dhcp_tick_1s++;
+            dns_1s_tick++;
         }
 
         /* Minute Process */

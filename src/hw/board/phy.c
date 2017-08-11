@@ -16,7 +16,7 @@
 
 #ifdef __DEF_USED_MDIO__
 #ifndef __W7500P__
-//#define __DEF_USED_IC101AG__ // PHY initialize for WIZwiki-W7500 Board
+#define __DEF_USED_IC101AG__ // PHY initialize for WIZwiki-W7500 Board
 #define W7500x_MDIO    GPIO_Pin_14
 #define W7500x_MDC     GPIO_Pin_15
 #else

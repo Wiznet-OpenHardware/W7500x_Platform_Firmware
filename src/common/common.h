@@ -6,20 +6,23 @@
 #include <string.h>
 
 //#define USE_DEBUG_PRINT
-
-/* Macro */
 #ifdef USE_DEBUG_PRINT
 #define WIZ_PRINT(fmt,...) printf(fmt,##__VA_ARGS__)
 #else
 #define WIZ_PRINT(fmt,...)
 #endif
 
-/* On/Off Status */
 typedef enum
 {
 	OFF		= 0,
 	ON		= 1
-} OnOff_State_Type;
+} OnOffState;
+
+typedef enum
+{
+    FALSE     = 0,
+    TRUE      = 1
+} TrueFalse;
 
 #define RET_OK			0
 #define RET_NOK			-1
