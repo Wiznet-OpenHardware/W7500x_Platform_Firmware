@@ -7,7 +7,6 @@
 
 #include "hw.h"
 
-
 void initHW()
 {
     //TODO : Initialize Board Support Package

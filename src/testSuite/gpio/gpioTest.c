@@ -22,7 +22,8 @@ void initGpioTestSuite(void)
     setGpioPin(PORT_C, 9, HIGH);
 }
 
-void doGpioPinBlynk(void){
+void doGpioPinBlynk(void)
+{
     setGpioPin(PORT_C, 5, LOW);
     delayMsForGpioTest(500);
     setGpioPin(PORT_C, 5, HIGH);
@@ -39,5 +40,6 @@ void delayMsForGpioTest(uint16_t millisecond)
     volatile uint32_t clk_cnt;
 
     clk_cnt = millisecond * (GetSystemClock() / 1000 / 10);
-    while (clk_cnt--);
+    while (clk_cnt--)
+        ;
 }

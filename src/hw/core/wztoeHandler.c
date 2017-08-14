@@ -11,36 +11,27 @@
 #include "system_W7500x.h"
 #include "W7500x_wztoe.h"
 
-/* Private functions */
-static SockDestinationNetInfo* getSocketDestinationNetInfoPointer (uint8_t sock_num);
-
 /* Private Structures */
 wiz_NetInfo LocalNetInfo;
-SockDestinationNetInfo SockDestNetInfo[_WIZCHIP_SOCK_NUM_];
 
-static SockDestinationNetInfo* getSocketDestinationNetInfoPointer (uint8_t sock_num){
-    if (sock_num >= _WIZCHIP_SOCK_NUM_) return (SockDestinationNetInfo*)NULL;
-    return &SockDestNetInfo[sock_num];
-}
-
-wiz_NetInfo* getLocalNetInfoPointer (){
+wiz_NetInfo* getLocalNetInfoPointer()
+{
     return &LocalNetInfo;
 }
 
-SockDestinationNetInfo* getSocketDestinationNetInfo(uint8_t sock_num)
+int32_t getSocketDestinationNetInfo(uint8_t sock_num, SockDestinationNetInfo* p_SockDestNetInfo)
 {
-    SockDestinationNetInfo* p_SockDestNetInfo = getSocketDestinationNetInfoPointer(sock_num);
-
-    if(p_SockDestNetInfo == NULL) return (SockDestinationNetInfo*)NULL;
+    if (p_SockDestNetInfo == NULL) return ERR_PARAM;
 
     getSn_DHAR(sock_num, p_SockDestNetInfo->mac);
     getSn_DIPR(sock_num, p_SockDestNetInfo->ip);
     p_SockDestNetInfo->port = getSn_DPORT(sock_num);
 
-    return p_SockDestNetInfo;
+    return RET_OK;
 }
 
-void setTOETimerTickTo100US(){
+void setTOETimerTickTo100US()
+{
     setTIC100US(GetSystemClock() / 10000);
 }
 
@@ -98,7 +89,8 @@ int32_t getSocketStatus(uint8_t sock_num)
             return SOCK_STATUS_MACRAW;
         case SOCK_PPPOE:
             return SOCK_STATUS_PPPOE;
-				default : break;
+        default:
+            break;
     }
     return RET_NOK;
 }

@@ -21,12 +21,10 @@ typedef enum
 
 typedef enum
 {
-    PULL_DOWN = 0,
-    PULL_UP = 1
+    PULL_DOWN = 0, PULL_UP = 1
 } GpioPullDownUp;
 
-int32_t initGpioPin(uint8_t port, uint8_t pin, uint8_t direction,
-        uint8_t mode);
+int32_t initGpioPin(uint8_t port, uint8_t pin, uint8_t direction, uint8_t mode);
 int32_t setGpioPin(uint8_t port, uint8_t pin, uint8_t one_bit);
 int32_t getGpioPinInputState(uint8_t port, uint8_t pin);
 int32_t getGpioPinOutputState(uint8_t port, uint8_t pin);
@@ -37,7 +35,6 @@ int32_t getGpioPinOutputState(uint8_t port, uint8_t pin);
 #elif (USING_CHIP == W7500)
 
 #endif
-
 
 #endif
 

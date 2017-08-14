@@ -10,10 +10,10 @@
 
 #include "stdint.h"
 
-typedef enum{
-		USE_DHCP_ETH = 0,
-		USE_STATIC_ETH = 1
-}DHCP_STATIC;
+typedef enum
+{
+    USE_DHCP_ETH = 0, USE_STATIC_ETH = 1
+} DHCP_STATIC;
 
 /* DHCP requires a Timer for the dhcp tick */
 void initWZTOETestSuite(uint8_t enable_dhcp);

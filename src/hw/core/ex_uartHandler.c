@@ -66,8 +66,7 @@ int32_t readExUartData(uint8_t *recv_buf, uint16_t length)
 
 #ifdef USE_EX_UART_AS_DATA
     total_length = length = MIN(BUFFER_USED_SIZE(ex_uart_rx), length);
-    if (IS_BUFFER_OUT_SEPARATED(ex_uart_rx) && (first_length =
-            BUFFER_OUT_1ST_SIZE(ex_uart_rx)) < length) {
+    if (IS_BUFFER_OUT_SEPARATED(ex_uart_rx) && (first_length = BUFFER_OUT_1ST_SIZE(ex_uart_rx)) < length) {
         memcpy(recv_buf, &BUFFER_OUT(ex_uart_rx), first_length);
         BUFFER_OUT_MOVE(ex_uart_rx, first_length);
         length -= first_length;
@@ -88,7 +87,7 @@ void handleExUartIRQ()
             flag_ex_uart_ringbuf_full = 1;
         }
         else {
-            BUFFER_IN(ex_uart_rx) = S_UART_ReceiveData();
+            BUFFER_IN(ex_uart_rx)= S_UART_ReceiveData();
             BUFFER_IN_MOVE(ex_uart_rx, 1);
         }
 

@@ -42,7 +42,7 @@
 /* Uncomment the line below according to the target W7500P device used in your
    application
   */
-#define __W7500P__
+//#define __W7500P__
 
 /** @addtogroup W7500x_Definitions W7500x Definitions
   This file defines all structures and symbols for W7500x:

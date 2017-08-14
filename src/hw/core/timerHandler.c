@@ -18,10 +18,10 @@ static volatile uint32_t hour_cnt = 0;
 /* private structure */
 typedef struct
 {
-        DUALTIMER_TypeDef* Register;
-        DUALTIMER_InitTypDef Definition;
-        IRQn_Type IRQNum;
-}HW_TimerStructure;
+    DUALTIMER_TypeDef* Register;
+    DUALTIMER_InitTypDef Definition;
+    IRQn_Type IRQNum;
+} HW_TimerStructure;
 
 HW_TimerStructure TimerStructure[TIMER_CH_MAX];
 
@@ -75,8 +75,8 @@ int32_t initTimer(uint8_t timer_ch)
     DUALTIMER_IntConfig(TimerRegister, ENABLE);
 
     DUALTIMER_Start(TimerRegister);
-		
-		return RET_OK;
+
+    return RET_OK;
 }
 
 void handleTimerZeroIRQ(void)

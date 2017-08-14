@@ -18,9 +18,9 @@ void initWZTOETestSuite(uint8_t enable_dhcp)
     uint8_t subnet[4] = { 255, 255, 255, 0 };
     uint8_t gateway[4] = { 192, 168, 11, 1 };
     uint8_t dns_server[4] = { 8, 8, 8, 8 };
-		
+
     if (enable_dhcp == USE_DHCP_ETH) {
-        if(initEthernetDHCP(mac_addr) != RET_OK){
+        if (initEthernetDHCP(mac_addr) != RET_OK) {
             initEthernetStatic(mac_addr, ip_addr, subnet, gateway, dns_server);
         }
     }

@@ -14,14 +14,12 @@
 
 typedef enum
 {
-	OFF		= 0,
-	ON		= 1
+    OFF = 0, ON = 1
 } OnOffState;
 
 typedef enum
 {
-    FALSE     = 0,
-    TRUE      = 1
+    FALSE = 0, TRUE = 1
 } TrueFalse;
 
 #define RET_OK			0

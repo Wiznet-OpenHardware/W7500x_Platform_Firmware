@@ -2,32 +2,24 @@
 
 #include "hw.h"
 #include "common.h"
+#include "W7500x_gpio.h"
+
+typedef struct
+{
+    GPIO_TypeDef* scl_port;
+    uint16_t scl_pin;
+    GPIO_TypeDef* sda_port;
+    uint16_t sda_pin;
+} HW_GpioI2CStructure;
 
 HW_GpioI2CStructure GpioI2C[GPIO_I2C_CH_MAX];
 
 /* Private functions prototype -----------------------------------------------*/
+void setSCLPinToHigh(void);
+void setSCLPinToLow(void);
+void setSDAPinToHigh(void);
+void setSDAPinToLow(void);
 void delayUsForSoftI2C(uint16_t microsecond);
-
-/* Private functions ---------------------------------------------------------*/
-void setSCLPinToHigh(void)
-{
-    GPIO_SetBits(I2C_SCL_PORT, I2C_SCL_PIN);
-}
-
-void setSCLPinToLow(void)
-{
-    GPIO_ResetBits(I2C_SCL_PORT, I2C_SCL_PIN);
-}
-
-void setSDAPinToHigh(void)
-{
-    I2C_SDA_PORT->OUTENCLR = I2C_SDA_PIN;
-}
-
-void setSDAPinToLow(void)
-{
-    I2C_SDA_PORT->OUTENSET = I2C_SDA_PIN;
-}
 
 /* Public functions ----------------------------------------------------------*/
 void initSoftI2C(void)
@@ -146,11 +138,31 @@ uint8_t readSoftI2CByte(unsigned char ack)
     return receive;
 }
 
+void setSCLPinToHigh(void)
+{
+    GPIO_SetBits(I2C_SCL_PORT, I2C_SCL_PIN);
+}
+
+void setSCLPinToLow(void)
+{
+    GPIO_ResetBits(I2C_SCL_PORT, I2C_SCL_PIN);
+}
+
+void setSDAPinToHigh(void)
+{
+    I2C_SDA_PORT->OUTENCLR = I2C_SDA_PIN;
+}
+
+void setSDAPinToLow(void)
+{
+    I2C_SDA_PORT->OUTENSET = I2C_SDA_PIN;
+}
+
 void delayUsForSoftI2C(uint16_t microsecond)
 {
     volatile uint32_t clk_cnt;
 
     clk_cnt = microsecond * (GetSystemClock() / 1000000 / 10);
-    while (clk_cnt--);
+    while (clk_cnt--)
+        ;
 }
-

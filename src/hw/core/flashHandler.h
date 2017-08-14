@@ -1,9 +1,6 @@
 #ifndef __FLASHHANDLER_H__
 #define __FLASHHANDLER_H__
 
-#include <stdint.h>
-#define _FLASH_DEBUG_
-
 /* W7500 IAP IDs */
 #define IAP_ENTRY			(0x1FFF1001) // Because Thum code
 #define IAP_ERAS			(0x010)
@@ -30,12 +27,11 @@
 #define DAT1_START_ADDR		0x0003FF00
 #define DAT1_END_ADDR		0x0003FFFF
 
-
 void eraseFlashSector(uint32_t sector_addr);
 void eraseFlashBlock(uint32_t block_addr);
 uint32_t writeDataToFlashDataSector(uint32_t addr, uint8_t *data, uint32_t data_len);
 uint32_t readDataFromFlash(uint32_t addr, uint8_t *data, uint32_t data_len);
 
-void DO_IAP( uint32_t id, uint32_t dst_addr, uint8_t* src_addr, uint32_t size);
+void DO_IAP(uint32_t id, uint32_t dst_addr, uint8_t* src_addr, uint32_t size);
 
 #endif

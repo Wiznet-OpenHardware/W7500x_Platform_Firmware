@@ -41,16 +41,14 @@ void doFlashWriteEraseTest()
 
     /* Read stored data from flash */
     readDataFromFlash(DAT0_START_ADDR, save_buff, sizeof(TestData));
-    printf("Something1: %s, Something2: 0x%08X \r\n", (const char*)p_testdata->something1,
-            p_testdata->something2);
+    printf("Something1: %s, Something2: 0x%08X \r\n", (const char*) p_testdata->something1, p_testdata->something2);
 
     /* Erase Sector */
     eraseFlashSector(DAT0_START_ADDR);
 
     /* Read erased flash memory */
     readDataFromFlash(DAT0_START_ADDR, save_buff, sizeof(TestData));
-    printf("Something1: %s, Something2: 0x%08X \r\n", (const char*)p_testdata->something1,
-            p_testdata->something2);
+    printf("Something1: %s, Something2: 0x%08X \r\n", (const char*) p_testdata->something1, p_testdata->something2);
 
     /* Set real data to structure */
     memcpy(FlashTestData.something1, "Hello, WIZnet!", sizeof("Hello, WIZnet!"));
@@ -65,13 +63,12 @@ void initUartForFlashTest(uint8_t uart_ch)
 {
     initUart(uart_ch, 115200, WORD_LEN8, PARITY_NONE, STOP_BIT1, FLOW_NONE);
 
-    writeUartData(uart_ch, (uint8_t*)"\r\nHello, WIZnet!\r\n",
-            sizeof("Hello, WIZnet!\r\n"));
+    writeUartData(uart_ch, (uint8_t*) "\r\nHello, WIZnet!\r\n", sizeof("Hello, WIZnet!\r\n"));
 }
 
 void initExUartForFlashTest()
 {
     initExUart(115200);
 
-    writeExUartData((uint8_t*)"\r\nHello, WIZnet!\r\n", sizeof("Hello, WIZnet!\r\n"));
+    writeExUartData((uint8_t*) "\r\nHello, WIZnet!\r\n", sizeof("Hello, WIZnet!\r\n"));
 }

@@ -8,7 +8,6 @@
 #ifndef SRC_HW_HW_H_
 #define SRC_HW_HW_H_
 
-
 #include "core/adcHandler.h"
 #include "core/crgHandler.h"
 #include "core/dmaHandler.h"
@@ -28,9 +27,6 @@
 #include "hw_def.h"
 #include "board/board.h"
 
-
 void initHW(void);
-
-
 
 #endif /* SRC_HW_HW_H_ */

@@ -22,7 +22,6 @@ int32_t initEthernetStatic(uint8_t* mac_addr, uint8_t* ip_addr, uint8_t* subnet,
 int32_t initEthernetDHCP(uint8_t* mac_addr);
 
 void maintainDHCP(void);
-int32_t updateLocalNetInfo(void);
 
 int32_t openSocketAsClient(uint8_t sock_num);
 int32_t openSocketAsServer(uint8_t sock_num, uint16_t port_num);
@@ -40,7 +39,5 @@ int32_t getSocketReceivedDataSize(uint8_t sock_num);
 
 int8_t openSocketDHCPAndGetIpAddress(uint8_t sock_num);
 int8_t openSocketDNSAndGetIpAddress(uint8_t sock_num, uint8_t* dns_server_ip, uint8_t* dns_domain_name, uint8_t* ip_addr_receive_buf);
-
-
 
 #endif /* SRC_APP_ETHERNETWRAPPER_H_ */

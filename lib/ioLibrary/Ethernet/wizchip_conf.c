@@ -132,8 +132,8 @@ _WIZCHIP  WIZCHIP =
       wizchip_cs_deselect,
       wizchip_bus_readbyte,
       wizchip_bus_writebyte
-//    wizchip_spi_readbyte,
-//    wizchip_spi_writebyte
+//      wizchip_spi_readbyte,
+//      wizchip_spi_writebyte
       };
 
 static uint8_t    _DNS_[4];      // DNS server ip address

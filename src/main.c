@@ -43,7 +43,6 @@ int main(void)
 
 } // End of main
 
-
 /**
  * @brief  Inserts a delay time.
  * @param  nTime: specifies the delay time length, in milliseconds.

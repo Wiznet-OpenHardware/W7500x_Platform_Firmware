@@ -18,7 +18,10 @@
 
 #define DEVICE_AT_MODE      0
 #define DEVICE_GW_MODE      1
-typedef enum{ST_BOOT, ST_APP, ST_UPGRADE} teDEVSTATUS;
+typedef enum
+{
+    ST_BOOT, ST_APP, ST_UPGRADE
+} teDEVSTATUS;
 
 #define NONBLOCKING_MODE 0
 #define BLOCKING_MODE    1
@@ -41,7 +44,6 @@ typedef enum{ST_BOOT, ST_APP, ST_UPGRADE} teDEVSTATUS;
 //#define DEVICE_BOARD_NAME WIZ750JR
 //#define DEVICE_BOARD_NAME WIZ750MINI
 //#define DEVICE_BOARD_NAME W7500P_S2E
-
 #ifdef DEVICE_BOARD_NAME
 #if (DEVICE_BOARD_NAME == WIZwiki_W7500)
 #define __W7500__

@@ -8,8 +8,6 @@
 #ifndef SRC_TESTSUITE_GPIO_GPIOTEST_H_
 #define SRC_TESTSUITE_GPIO_GPIOTEST_H_
 
-
-
 void initGpioTestSuite(void);
 void doGpioPinBlynk(void);
 
