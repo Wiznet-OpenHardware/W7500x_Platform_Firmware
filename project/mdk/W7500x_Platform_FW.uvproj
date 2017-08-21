@@ -539,9 +539,9 @@
               <FilePath>..\..\src\main.c</FilePath>
             </File>
             <File>
-              <FileName>printf_retarget.c</FileName>
+              <FileName>retarget.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\src\printf_retarget.c</FilePath>
+              <FilePath>..\..\src\retarget.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -653,6 +653,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\src\testSuite\gpio\gpioTest.c</FilePath>
             </File>
+            <File>
+              <FileName>wztoeTest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\testSuite\wztoe\wztoeTest.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -677,6 +682,11 @@
               <FileName>app.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\src\app\app.c</FilePath>
+            </File>
+            <File>
+              <FileName>ethernetWrapper.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\app\ethernetWrapper.c</FilePath>
             </File>
           </Files>
         </Group>

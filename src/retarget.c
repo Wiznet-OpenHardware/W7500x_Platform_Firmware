@@ -25,10 +25,10 @@
 // Replaced the defines for UART Selector to Callback functions.
 #define USING_UART1
 #if defined (USING_UART0)
-#define UART_SEND_BYTE(ch)  UartPutc(UART0,ch)
+#define UART_SEND_BYTE(ch)  UartPutc(UART0, ch)
 #define UART_RECV_BYTE()    UartGetc(UART0)
 #elif defined (USING_UART1)
-#define UART_SEND_BYTE(ch)  UartPutc(UART1,ch)
+#define UART_SEND_BYTE(ch)  UartPutc(UART1, ch)
 #define UART_RECV_BYTE()    UartGetc(UART1)
 #elif defined (USING_UART2)
 #define UART_SEND_BYTE(ch)  S_UartPutc(ch)

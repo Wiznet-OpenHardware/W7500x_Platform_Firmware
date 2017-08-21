@@ -27,6 +27,9 @@
 /* Private variables ---------------------------------------------------------*/
 static __IO uint32_t TimingDelay;
 
+/* Function Prototypes */
+void delay(__IO uint32_t milliseconds);
+
 /**
  * @brief  Main program
  * @param  None
