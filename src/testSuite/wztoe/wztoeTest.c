@@ -11,6 +11,8 @@
 #include "ethernetWrapper.h"
 #include "wztoeTest.h"
 
+#define TEST_BUF_SIZE 256
+
 void initWZTOETestSuite(uint8_t enable_dhcp)
 {
     uint8_t mac_addr[6] = { 0x00, 0x08, 0xDC, 0x50, 0x4F, 0x5F };
@@ -29,9 +31,10 @@ void initWZTOETestSuite(uint8_t enable_dhcp)
     }
 }
 
-void doTCPServerLoopback(uint8_t sock_num, uint16_t port_num, uint8_t* share_buf)
+void doTCPServerLoopback(uint8_t sock_num, uint16_t port_num)
 {
     uint16_t len;
+    uint8_t share_buf[TEST_BUF_SIZE];
 
     if (isTCPSocketConnected(sock_num)) {
         len = getSocketReceivedDataSize(sock_num);
@@ -40,15 +43,15 @@ void doTCPServerLoopback(uint8_t sock_num, uint16_t port_num, uint8_t* share_buf
             sendDataTCP(sock_num, share_buf, len);
         }
     }
-
-    if (getSocketStatus(sock_num) == SOCK_STATUS_CLOSED) {
+    else if (getSocketStatus(sock_num) == SOCK_STATUS_CLOSED) {
         openSocketAsServer(sock_num, port_num);
     }
 }
 
-void doTCPClientLoopback(uint8_t sock_num, uint8_t* dest_ip_addr, uint16_t dest_port_num, uint8_t* share_buf)
+void doTCPClientLoopback(uint8_t sock_num, uint8_t* dest_ip_addr, uint16_t dest_port_num)
 {
     uint16_t len;
+    uint8_t share_buf[TEST_BUF_SIZE];
 
     if (isTCPSocketConnected(sock_num)) {
         len = getSocketReceivedDataSize(sock_num);
@@ -60,8 +63,26 @@ void doTCPClientLoopback(uint8_t sock_num, uint8_t* dest_ip_addr, uint16_t dest_
     else if (getSocketStatus(sock_num) == SOCK_STATUS_INIT) {
         connectToServerIP(sock_num, dest_ip_addr, dest_port_num);
     }
-
-    if (getSocketStatus(sock_num) == SOCK_STATUS_CLOSED) {
+    else if (getSocketStatus(sock_num) == SOCK_STATUS_CLOSED) {
         openSocketAsClient(sock_num);
+    }
+}
+
+void doUDPLoopback(uint8_t sock_num, uint16_t port_num)
+{
+    uint16_t len;
+    uint8_t peer_ip_addr[4];
+    uint16_t peer_port_num;
+    uint8_t share_buf[TEST_BUF_SIZE];
+
+    if (getSocketStatus(sock_num) == SOCK_STATUS_UDP) {
+        len = getSocketReceivedDataSize(sock_num);
+        if (len) {
+            len = receiveDataUDP(sock_num, share_buf, len, peer_ip_addr, &peer_port_num);
+            sendDataUDP(sock_num, share_buf, len, peer_ip_addr, peer_port_num);
+        }
+    }
+    else if (getSocketStatus(sock_num) == SOCK_STATUS_CLOSED) {
+        openSocketAsUDPPeer(sock_num, port_num);
     }
 }

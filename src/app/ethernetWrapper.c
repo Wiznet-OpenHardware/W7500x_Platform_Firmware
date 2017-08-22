@@ -47,8 +47,6 @@ int32_t initEthernetStatic(uint8_t* mac_addr, uint8_t* ip_addr, uint8_t* subnet,
 
     ctlnetwork(CN_SET_NETINFO, p_LocalNetInfo);
 
-    if (openSocketDHCPAndGetIpAddress(SOCK_DHCP) != DHCP_IP_LEASED) return RET_NOK;
-
     return RET_OK;
 }
 
@@ -100,6 +98,14 @@ int32_t openSocketAsClient(uint8_t sock_num)
     return RET_NOK;
 }
 
+int32_t openSocketAsUDPPeer(uint8_t sock_num, uint16_t port_num)
+{
+    if(socket(sock_num, Sn_MR_UDP, port_num, 0) == sock_num){
+        return RET_OK;
+    }
+    return RET_NOK;
+}
+
 int32_t connectToServerDomain(uint8_t sock_num, uint8_t* domain_name, uint16_t dest_port)
 {
     uint8_t domain_ip_addr[4];
@@ -143,22 +149,22 @@ int32_t sendDataTCP(uint8_t sock_num, uint8_t * send_buf, uint16_t send_len)
     return send(sock_num, send_buf, send_len);
 }
 
-int32_t sendDataUDP(uint8_t sock_num, uint8_t * send_buf, uint16_t send_len, uint8_t * peer_addr, uint16_t peer_port)
+int32_t sendDataUDP(uint8_t sock_num, uint8_t* send_buf, uint16_t send_len, uint8_t* peer_addr, uint16_t peer_port)
 {
     if ((send_buf == NULL) || (peer_addr == NULL)) return ERR_PARAM;
     return sendto(sock_num, send_buf, send_len, peer_addr, peer_port);
 }
 
-int32_t receiveDataTCP(uint8_t sock_num, uint8_t * recv_buf, uint16_t read_len)
+int32_t receiveDataTCP(uint8_t sock_num, uint8_t* recv_buf, uint16_t read_len)
 {
     if (recv_buf == NULL) return ERR_PARAM;
     return recv(sock_num, recv_buf, read_len);
 }
 
-int32_t receiveDataUDP(uint8_t sock_num, uint8_t* recv_buf, uint16_t read_len, uint8_t* peer_addr, uint16_t peer_port)
+int32_t receiveDataUDP(uint8_t sock_num, uint8_t* recv_buf, uint16_t read_len, uint8_t* peer_addr, uint16_t* peer_port)
 {
     if ((recv_buf == NULL) || (peer_addr == NULL)) return ERR_PARAM;
-    return recvfrom(sock_num, recv_buf, read_len, peer_addr, &peer_port);
+    return recvfrom(sock_num, recv_buf, read_len, peer_addr, peer_port);
 }
 
 int32_t getSocketReceivedDataSize(uint8_t sock_num)

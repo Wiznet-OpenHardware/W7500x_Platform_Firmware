@@ -25,16 +25,17 @@ void maintainDHCP(void);
 
 int32_t openSocketAsClient(uint8_t sock_num);
 int32_t openSocketAsServer(uint8_t sock_num, uint16_t port_num);
+int32_t openSocketAsUDPPeer(uint8_t sock_num, uint16_t port_num);
 
 int32_t connectToServerDomain(uint8_t sock_num, uint8_t* domain_name, uint16_t dest_port);
 int32_t connectToServerIP(uint8_t sock_num, uint8_t* dest_ip_addr, uint16_t dest_port);
 int32_t disconnectTCPConnection(uint8_t sock_num);
 int32_t isTCPSocketConnected(uint8_t sock_num);
 
-int32_t sendDataTCP(uint8_t sock_num, uint8_t * send_buf, uint16_t send_len);
-int32_t sendDataUDP(uint8_t sock_num, uint8_t * send_buf, uint16_t send_len, uint8_t * peer_addr, uint16_t peer_port);
-int32_t receiveDataTCP(uint8_t sock_num, uint8_t * recv_buf, uint16_t read_len);
-int32_t receiveDataUDP(uint8_t sock_num, uint8_t * recv_buf, uint16_t read_len, uint8_t * peer_addr, uint16_t peer_port);
+int32_t sendDataTCP(uint8_t sock_num, uint8_t* send_buf, uint16_t send_len);
+int32_t sendDataUDP(uint8_t sock_num, uint8_t* send_buf, uint16_t send_len, uint8_t* peer_addr, uint16_t peer_port);
+int32_t receiveDataTCP(uint8_t sock_num, uint8_t* recv_buf, uint16_t read_len);
+int32_t receiveDataUDP(uint8_t sock_num, uint8_t* recv_buf, uint16_t read_len, uint8_t* peer_addr, uint16_t* peer_port);
 int32_t getSocketReceivedDataSize(uint8_t sock_num);
 
 int8_t openSocketDHCPAndGetIpAddress(uint8_t sock_num);
