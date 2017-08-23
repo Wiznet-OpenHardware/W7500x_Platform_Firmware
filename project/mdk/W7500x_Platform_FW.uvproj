@@ -634,11 +634,6 @@
               <FilePath>..\..\src\testSuite\flash\flashTest.c</FilePath>
             </File>
             <File>
-              <FileName>softI2CTest.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\src\testSuite\softI2C\softI2CTest.c</FilePath>
-            </File>
-            <File>
               <FileName>uartTest.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\src\testSuite\uart\uartTest.c</FilePath>
@@ -657,6 +652,16 @@
               <FileName>wztoeTest.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\src\testSuite\wztoe\wztoeTest.c</FilePath>
+            </File>
+            <File>
+              <FileName>eepromEE24AAXX.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\testSuite\softI2C\eepromEE24AAXX.c</FilePath>
+            </File>
+            <File>
+              <FileName>softi2cTest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\src\testSuite\softI2C\softi2cTest.c</FilePath>
             </File>
           </Files>
         </Group>
